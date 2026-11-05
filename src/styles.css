@@ -15,7 +15,7 @@
 .finder-result-row{display:grid;grid-template-columns:minmax(0,1fr) 280px;gap:28px;align-items:center}
 .finder-result-row .finder-result{min-width:0;gap:20px;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr)}
 .finder-mascot{display:block;position:relative;width:100%;height:420px;overflow:hidden}
-.finder-mascot::before{content:'';position:absolute;width:150%;aspect-ratio:1;left:50%;top:50%;transform:translate(-50%,-50%);background-image:var(--mascot-sprite);background-size:200% 200%;background-repeat:no-repeat;animation:mascot-frames 3.6s step-end infinite}
+.finder-mascot::before{content:'';position:absolute;width:114.75%;aspect-ratio:1;left:50%;top:50%;transform:translate(-50%,-50%);background-image:var(--mascot-sprite);background-size:200% 200%;background-repeat:no-repeat;animation:mascot-frames 3.6s step-end infinite}
 .finder-mascot-baby{--mascot-sprite:url('/assets/lumi-mascot-park-matte-v12-sprite.png')}
 .finder-mascot-baby::before{animation-name:mascot-march;animation-duration:1.6s}
 @keyframes mascot-march{0%,100%{background-position:0 0}25%{background-position:100% 0}50%{background-position:0 100%}75%{background-position:100% 100%}}
