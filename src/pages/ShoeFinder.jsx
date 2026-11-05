@@ -79,7 +79,7 @@ export default function ShoeFinder() {
                   <span
                     className={`finder-mascot finder-mascot-mobile finder-mascot-${p.series}`}
                     role="img"
-                    aria-label={p.series === 'baby' ? 'LUMI 公園貓交替踏步並揮手，穿著吊帶褲與寶寶鞋' : 'LUMI 宴會貓輕拉粉色裙擺行禮，穿著公主鞋'}
+                    aria-label={p.series === 'baby' ? 'LUMI 公園貓雙手自然垂下擺動並走路，穿著吊帶褲與寶寶鞋' : 'LUMI 宴會貓輕拉粉色裙擺行禮，穿著公主鞋'}
                   />
                   <Link className="pill-btn" to={`/${p.series}/product/${p.id}`}>查看這雙鞋 →</Link>
                 </div>
@@ -87,7 +87,7 @@ export default function ShoeFinder() {
                 <span
                   className={`finder-mascot finder-mascot-desktop finder-mascot-${p.series}`}
                   role="img"
-                  aria-label={p.series === 'baby' ? 'LUMI 公園貓交替踏步並揮手，穿著吊帶褲與寶寶鞋' : 'LUMI 宴會貓輕拉粉色裙擺行禮，穿著公主鞋'}
+                  aria-label={p.series === 'baby' ? 'LUMI 公園貓雙手自然垂下擺動並走路，穿著吊帶褲與寶寶鞋' : 'LUMI 宴會貓輕拉粉色裙擺行禮，穿著公主鞋'}
                 />
               </div>;
             })}</div>
