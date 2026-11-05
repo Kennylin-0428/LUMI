@@ -46,7 +46,9 @@ export default function ShoeFinder() {
             <li key={label} className={step >= i ? 'current' : ''} aria-current={step === i ? 'step' : undefined}><span>{step > i ? '✓' : `0${i + 1}`}</span>{label}</li>
           ))}
         </ol>
-        <div className="finder-panel">
+        <div className={`finder-panel${step < 2 ? ' finder-panel-first' : ''}`}>
+          {step === 0 && <img className="finder-puzzled-cat" src="/assets/lumi-mascot-puzzled-barefoot.png" alt="LUMI 貓咪赤著腳，托著下巴疑惑地思考要選哪雙鞋" />}
+          {step === 1 && <img className="finder-puzzled-cat finder-cabinet-cat" src="/assets/lumi-mascot-shoe-cabinet-sneakers-v2.png" alt="LUMI 貓咪赤著腳打開鞋櫃，挑選米色與淺藍色跑步鞋" />}
           <span className="eyebrow">{step < 3 ? `CHAPTER 0${step + 1}` : 'YOUR LUMI MATCH'}</span>
           <h2 ref={heading} tabIndex={-1}>{step < 2 ? QUESTIONS[step].title : step === 2 ? '出發前，量量小腳丫。' : '屬於寶貝的選鞋提案 ♡'}</h2>
           {step < 2 ? <>
@@ -74,11 +76,16 @@ export default function ShoeFinder() {
                 <img src={`/${p.image}`} alt={p.name} />
                 <div><span className="tag">依你的偏好推薦</span><h3>{p.name}</h3><p>{p.subtitle}</p>
                   <div className="finder-size"><strong>{candidate ? `優先核對尺寸：${candidate}（待確認）` : '尺寸建議：待尺寸表確認'}</strong><p>{foot ? `你提供的腳長：${foot} cm。` : '你尚未提供腳長。'}{candidate ? '此尺寸來自你平常穿的標示，尚未驗證是否合腳。' : '目前缺少可將腳長換算為此款尺碼的資料，暫時無法推薦確切尺寸。'}</p><p>商品標示尺寸：{p.sizes.join('、')}。請至商品頁核對鞋內長與楦頭，或提供腳長向賣場客服確認。</p></div>
+                  <span
+                    className={`finder-mascot finder-mascot-mobile finder-mascot-${p.series}`}
+                    role="img"
+                    aria-label={p.series === 'baby' ? 'LUMI 公園貓交替踏步並揮手，穿著吊帶褲與寶寶鞋' : 'LUMI 宴會貓輕拉粉色裙擺行禮，穿著公主鞋'}
+                  />
                   <Link className="pill-btn" to={`/${p.series}/product/${p.id}`}>查看這雙鞋 →</Link>
                 </div>
                 </article>
                 <span
-                  className={`finder-mascot finder-mascot-${p.series}`}
+                  className={`finder-mascot finder-mascot-desktop finder-mascot-${p.series}`}
                   role="img"
                   aria-label={p.series === 'baby' ? 'LUMI 公園貓交替踏步並揮手，穿著吊帶褲與寶寶鞋' : 'LUMI 宴會貓輕拉粉色裙擺行禮，穿著公主鞋'}
                 />
