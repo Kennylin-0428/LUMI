@@ -1,0 +1,3 @@
+Tool: built-in image_gen; transparent_background: true
+Applied separately to lumi-mascot-park.png and lumi-mascot-party.png.
+Use case: background-extraction. Edit the provided illustration: remove the entire scenery/background and ground including ground shadow, leaving ONLY the full-body kitten mascot and everything it wears (clothing, shoes, bag or hair bow if present) on a genuinely transparent alpha background. Preserve the original kitten face, eyes, proportions, pose, colors, watercolor texture, garment detail and shoes EXACTLY as in source, no redesign, no added details. Clean delicate fur edges, preserve all ears tail paws and shoes without cropping. Remove detached decorative marks above head. No checkerboard painted into the image, no white matte, no text.

@@ -6,6 +6,7 @@ export default function Footer() {
       <div className="wrap footer-grid">
         <div>
           <div className="logo footer-logo">
+            <img className="footer-logo-image" src="/assets/logo_圓.png" alt="" width="52" height="52" />
             <span className="logo-mark">LUMI</span>
             <small>露米</small>
           </div>

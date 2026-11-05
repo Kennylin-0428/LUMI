@@ -1,4 +1,4 @@
-export const ASSETS = { baby: 'assets/t1.png', princess: 'assets/princess-shoes.jpg' };
+export const ASSETS = { baby: 'assets/t1.png', princess: 'assets/pc1-1.png' };
 
 // 將實際蝦皮商品網址填入 product.shopeeUrl。留空時會顯示提示，不會連到錯誤網站。
 export const products = [

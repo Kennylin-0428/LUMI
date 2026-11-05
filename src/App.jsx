@@ -11,6 +11,7 @@ import Story from './pages/Story.jsx';
 import SizeGuide from './pages/SizeGuide.jsx';
 import Sitemap from './pages/Sitemap.jsx';
 import NotFound from './pages/NotFound.jsx';
+import ShoeFinder from './pages/ShoeFinder.jsx';
 
 const TITLES = {
   '': '首頁',
@@ -20,6 +21,7 @@ const TITLES = {
   story: '品牌故事',
   'size-guide': '尺寸指南',
   sitemap: '網站架構',
+  'shoe-finder': '選鞋小旅程',
 };
 
 export default function App() {
@@ -38,6 +40,7 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/collections" element={<Collections />} />
+          <Route path="/shoe-finder" element={<ShoeFinder />} />
           <Route path="/:seriesKey" element={<SeriesIntro />} />
           <Route path="/:seriesKey/products" element={<ProductList />} />
           <Route path="/:seriesKey/product/:productId" element={<ProductDetail />} />

@@ -8,6 +8,7 @@ const NAV = [
   ['princess', '/princess', '公主鞋系列'],
   ['story', '/story', '品牌故事'],
   ['size-guide', '/size-guide', '尺寸指南'],
+  ['shoe-finder', '/shoe-finder', '選鞋小旅程'],
 ];
 
 export default function Header({ section }) {
@@ -20,7 +21,8 @@ export default function Header({ section }) {
   return (
     <header className="site-header">
       <div className="header-inner wrap">
-        <Link className="logo" to="/" aria-label="LUMI 露米首頁">
+        <Link className="logo header-logo" to="/" aria-label="LUMI 露米首頁">
+          <img className="header-logo-image" src="/assets/logo_圓.png" alt="" width="52" height="52" />
           <span className="logo-mark">LUMI</span>
           <small>露米</small>
         </Link>
@@ -40,7 +42,7 @@ export default function Header({ section }) {
             </Link>
           ))}
         </nav>
-        <Link className="header-cta" to="/collections">探索鞋款 ♡</Link>
+        <Link className="header-cta" to="/shoe-finder">探索鞋款 ♡</Link>
       </div>
     </header>
   );
