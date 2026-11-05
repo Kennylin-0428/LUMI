@@ -39,7 +39,7 @@ function ProductDetailInner({ product: p }) {
         ]}
       />
       <div className="wrap">
-        <SeriesTabs seriesKey={p.series} active="detail" productId={p.id} />
+        {/* <SeriesTabs seriesKey={p.series} active="detail" productId={p.id} /> */}
         <section className="detail-layout">
           <div className="detail-photo">
             <img src={p.image} alt={`${p.name}商品照片`} />
