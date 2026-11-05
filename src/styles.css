@@ -17,9 +17,9 @@
 .finder-mascot{display:block;position:relative;width:100%;height:420px;overflow:hidden}
 .finder-mascot::before{content:'';position:absolute;width:114.75%;aspect-ratio:1;left:50%;top:50%;transform:translate(-50%,-50%);background-image:var(--mascot-sprite);background-size:200% 200%;background-repeat:no-repeat;animation:mascot-frames 3.6s step-end infinite}
 .finder-mascot-baby{--mascot-sprite:url('/assets/lumi-mascot-park-natural-walk-v13-sprite.png')}
-.finder-mascot-baby::before{animation-name:mascot-march;animation-duration:2.4s}
-/* Repeat passing poses between strides: 1 → 2 → 3 → 4 → 3 → 2. */
-@keyframes mascot-march{0%,100%{background-position:0 0}16.6667%{background-position:100% 0}33.3333%{background-position:0 100%}50%{background-position:100% 100%}66.6667%{background-position:0 100%}83.3333%{background-position:100% 0}}
+.finder-mascot-baby::before{animation-name:mascot-march;animation-duration:3.6s}
+/* Walking frame order: 2 → 1 → 4 → 3 → 4 → 2 → 1 → 4 → 3. */
+@keyframes mascot-march{0%,55.5556%,100%{background-position:100% 0}11.1111%,66.6667%{background-position:0 0}22.2222%,44.4444%,77.7778%{background-position:100% 100%}33.3333%,88.8889%{background-position:0 100%}}
 .finder-mascot-princess{--mascot-sprite:url('/assets/lumi-mascot-party-soft-fur-v6-sprite.png')}
 .finder-mascot-princess::before{animation-name:mascot-curtsy;animation-duration:1.8s}
 /* Upright frames share the same head center; keep their placement fixed. */
