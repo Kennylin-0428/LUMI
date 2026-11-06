@@ -32,8 +32,8 @@ export default function Home() {
       <section className="wrap section">
         <SectionHeading
           eyebrow="OUR COLLECTIONS"
-          title="找到寶貝喜歡的那一雙"
-          desc="兩種系列，兩種可愛。分開挑選，找到適合日常與特殊時刻的鞋款。"
+          title="找到適合寶貝的鞋子"
+          desc="每個系列都經典！分開挑選，找到適合日常與特殊時刻的鞋款。"
         />
         <CollectionCards />
       </section>

@@ -80,3 +80,20 @@
 .story-carousel-arrow svg{display:block;width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
 
 .series-products{scroll-margin-top:100px}.series-products .products-grid{grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),340px));justify-content:center}
+
+.series-details{--detail-ink:#708ea3;--detail-paper:#f5f9fc;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;padding-top:12px}
+.series-details.princess{--detail-ink:#b17c92;--detail-paper:#fff6f9}
+.series-detail{position:relative;overflow:hidden;padding:25px 28px 22px;background:var(--detail-paper);border:1px solid #e5e0da;border-radius:70px 70px 24px 24px;color:var(--detail-ink);text-align:center;transition:transform .25s,box-shadow .25s}
+.series-detail:nth-child(2){margin-top:24px;margin-bottom:-24px;background:#fff9ed;--detail-paper:#fff9ed}
+.series-detail:nth-child(3){background:#f7f1fa;--detail-paper:#f7f1fa}
+.series-detail-top{display:flex;align-items:center;justify-content:center;gap:10px;margin-top:13px}
+.series-detail-number{font-family:Georgia,serif;font-size:27px;font-style:italic;line-height:1}
+.series-detail-label{font-size:9px;letter-spacing:1.5px;font-weight:700}
+.series-detail-art{max-width:220px;margin:10px auto 0}
+.series-detail-art svg{display:block;width:100%;height:auto}
+.series-detail h3{margin:0 0 10px;font-size:21px;letter-spacing:2px;color:#79574e}
+.series-detail p{max-width:240px;margin:0 auto;min-height:50px;font-size:13px;line-height:1.9;color:#927c75}
+.series-detail-signature{display:block;margin-top:25px;padding-top:15px;border-top:1px dashed #cdbdbb80;font-family:Georgia,serif;font-style:italic;font-size:11px;letter-spacing:1px;opacity:.8}
+@media(hover:hover){.series-detail:hover{transform:translateY(-5px);box-shadow:0 12px 26px #8a706312}}
+@media(max-width:730px){.series-details{grid-template-columns:1fr;gap:20px;max-width:420px;margin:auto}.series-detail:nth-child(2){margin:0}.series-detail{padding:22px 28px}.series-detail-art{max-width:190px}.series-detail p{min-height:0}}
+@media(prefers-reduced-motion:reduce){.series-detail{transition:none}}

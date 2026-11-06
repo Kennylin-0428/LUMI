@@ -4,7 +4,7 @@ import Breadcrumbs from '../components/Breadcrumbs.jsx';
 import PillButton from '../components/PillButton.jsx';
 import SectionHeading from '../components/SectionHeading.jsx';
 import ProductCard from '../components/ProductCard.jsx';
-import FeatureRow from '../components/FeatureRow.jsx';
+import SeriesDetails from '../components/SeriesDetails.jsx';
 import NotFound from './NotFound.jsx';
 
 export default function SeriesIntro() {
@@ -43,8 +43,8 @@ export default function SeriesIntro() {
         </div>
       </section>
       <section className="wrap section">
-        <SectionHeading eyebrow="DETAILS WE LOVE" title={`${d.name}的可愛特色`} />
-        <FeatureRow features={d.features} />
+        <SectionHeading eyebrow="DETAILS WE LOVE" title={seriesKey === 'baby' ? '把可愛，藏進每一小步' : '把小日常，穿成童話'} desc="從設計到配色，慢慢發現那些讓人喜歡的小細節。" />
+        <SeriesDetails seriesKey={seriesKey} features={d.features} />
       </section>
 
     </>
