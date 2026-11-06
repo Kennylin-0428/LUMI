@@ -20,7 +20,7 @@ export default function Footer() {
         </div>
         <div>
           <h4>關於露米</h4>
-          <Link to="/story">品牌故事</Link>
+          <Link to="/story">關於 LUMI</Link>
           <Link to="/size-guide">尺寸指南</Link>
           <Link to="/sitemap">網站導覽</Link>
         </div>

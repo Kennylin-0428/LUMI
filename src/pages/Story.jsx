@@ -7,7 +7,7 @@ import SectionHeading from '../components/SectionHeading.jsx';
 export default function Story() {
   return (
     <>
-      <Breadcrumbs items={['品牌故事']} />
+      <Breadcrumbs items={['關於 LUMI']} />
       <section className="wrap">
         <div className="intro-hero princess">
           <div>
@@ -25,7 +25,7 @@ export default function Story() {
         </div>
       </section>
       <section className="wrap section">
-        <SectionHeading eyebrow="OUR LITTLE STORY" title="每一步，都是值得收藏的成長故事" />
+        <SectionHeading eyebrow="WHAT WE CARE ABOUT" title="陪伴每個日常，點綴每個特別時刻" />
         <div className="rich-text">
           <p>從第一次挑選童鞋，到準備出遊、生日聚會或家庭合照，孩子的成長裡有好多值得記住的日子。</p>
           <p>露米喜歡溫柔的米色、粉色、淺藍色與淺紫色，也喜歡小小鞋子上的童趣細節。我們帶著這份喜好挑選款式，相信日常活力與精緻打扮都各有可愛。</p>

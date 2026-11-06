@@ -18,7 +18,7 @@ const TITLES = {
   collections: '系列總覽',
   baby: '寶寶鞋系列',
   princess: '公主鞋系列',
-  story: '品牌故事',
+  story: '關於 LUMI',
   'size-guide': '尺寸指南',
   sitemap: '網站架構',
   'shoe-finder': '選鞋小旅程',

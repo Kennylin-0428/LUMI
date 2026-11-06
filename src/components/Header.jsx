@@ -6,7 +6,7 @@ const NAV = [
   ['collections', '/collections', '系列總覽'],
   ['baby', '/baby', '寶寶鞋系列'],
   ['princess', '/princess', '公主鞋系列'],
-  ['story', '/story', '品牌故事'],
+  ['story', '/story', '關於 LUMI'],
   ['size-guide', '/size-guide', '尺寸指南'],
   ['shoe-finder', '/shoe-finder', '選鞋小旅程'],
 ];

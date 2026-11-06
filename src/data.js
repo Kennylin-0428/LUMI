@@ -17,7 +17,7 @@ export const products = [
     id: 'princess-lace',
     series: 'princess',
     name: '珍珠蕾絲款｜夢幻公主鞋',
-    colors: ['奶白', '甜粉'],
+    colors: ['珍珠白', '甜粉'],
     sizes: ['請參考實際商品尺寸'],
     price: null,
     image: ASSETS.princess,
@@ -43,7 +43,7 @@ export const series = {
     name: '公主鞋系列',
     eyebrow: 'PRINCESS COLLECTION',
     tagline: '精緻花飾，珍藏閃耀小日常',
-    description: '精緻鞋頭花飾搭配挺版飽滿鞋型，讓每個值得紀念的日子更加可愛。',
+    description: '精緻鞋頭花飾搭配挺版飽滿鞋型，展現甜美優雅氣質，為每一次精心打扮增添亮點。',
     image: '/assets/pc系列1.svg',
     features: [
       ['❀', '精緻花飾', '細緻花飾點綴鞋頭，為每一雙公主鞋添上甜美亮點。'],

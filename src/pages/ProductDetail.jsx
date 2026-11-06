@@ -60,7 +60,7 @@ function ProductDetailInner({ product: p }) {
             <p role="status" style={notice ? { color: '#ae6478' } : undefined}>{notice}</p>
           </div>
         </section>
-        <section className="section">
+        {/* <section className="section">
           <SectionHeading eyebrow="PRODUCT DETAILS" title="商品特色" />
           <div className="detail-facts">
             {d.features.map(([icon, title, desc]) => (
@@ -71,7 +71,7 @@ function ProductDetailInner({ product: p }) {
               </div>
             ))}
           </div>
-        </section>
+        </section> */}
       </div>
     </>
   );
