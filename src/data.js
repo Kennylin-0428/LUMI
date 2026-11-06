@@ -1,30 +1,27 @@
+import productsData from './products.json';
+
 export const ASSETS = { baby: 'assets/t1.svg', princess: 'assets/pc1-1.svg' };
 
+// 商品資料存放在 src/products.json，請透過後台（npm run dev 後開啟 #/admin）新增與編輯。
 // 將實際蝦皮商品網址填入 product.shopeeUrl。留空時會顯示提示，不會連到錯誤網站。
-export const products = [
-  {
-    id: 'baby-candy',
-    series: 'baby',
-    name: '糖果跑跑款｜繽紛撞色',
-    colors: ['奶茶米', '天空藍', '甜心粉', '米白色'],
-    sizes: ['13 cm', '14 cm', '15 cm', '16 cm', '17 cm'],
-    price: null,
-    image: ASSETS.baby,
-    subtitle: '透氣網眼 × 雙帶設計・日常自在探索',
-    shopeeUrl: '',
-  },
-  {
-    id: 'princess-lace',
-    series: 'princess',
-    name: '珍珠蕾絲款｜夢幻公主鞋',
-    colors: ['珍珠白', '甜粉'],
-    sizes: ['請參考實際商品尺寸'],
-    price: null,
-    image: ASSETS.princess,
-    subtitle: '立體蕾絲 × 珍珠點綴・溫柔優雅',
-    shopeeUrl: '',
-  },
-];
+export const products = productsData.map((p) => ({
+  subtitle: '',
+  price: null,
+  sku: '',
+  colors: [],
+  sizes: [],
+  soldOutSizes: [],
+  image: '',
+  images: [],
+  description: '',
+  material: '',
+  care: '',
+  shopeeUrl: '',
+  ...p,
+}));
+
+export const formatPrice = (price) =>
+  price === null || price === undefined || price === '' ? '價格請見蝦皮賣場' : `NT$ ${Number(price).toLocaleString('zh-TW')}`;
 
 export const series = {
   baby: {

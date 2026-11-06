@@ -13,7 +13,10 @@ npm run preview  # 預覽 build 結果
 
 ## 專案結構
 
-- `src/data.js`：商品與系列資料
+- `src/products.json`：商品資料（由後台編輯）
+- `src/data.js`：系列資料、商品資料載入
+- `src/admin/`：商品後台頁面
+- `vite-plugin-admin.js`：後台存檔與圖片上傳 API（僅開發模式）
 - `src/App.jsx`：路由設定
 - `src/pages/`：各頁面（首頁、系列介紹、商品列表、商品詳情等）
 - `src/components/`：共用元件（Header、Footer、麵包屑、商品卡片等）
@@ -33,13 +36,23 @@ npm run preview  # 預覽 build 結果
 - `#/story` 品牌故事
 - `#/size-guide` 尺寸指南
 - `#/sitemap` 網站架構圖
+- `#/admin` 商品後台（僅 `npm run dev`）
 
-## 修改商品
+## 商品後台
 
-打開 `src/data.js`，修改 `products` 陣列即可：`name`, `colors`, `sizes`, `subtitle`, `image`, `shopeeUrl`。
+執行 `npm run dev` 後開啟 `http://localhost:5173/#/admin`（以終端機顯示的網址為準），即可新增、編輯、刪除與排序商品：
+
+- **基本資訊**：商品名稱、副標題、分類、售價 (NT$)、料號、網址 ID、蝦皮連結
+- **標籤 / 樣式**：顏色選項、可選尺碼、售完尺碼
+- **商品圖片**：主圖上傳、加入更多圖片、圖片列表（排序、設為主圖、移除）
+- **商品描述**：商品描述、材質、保養方式
+
+存檔會直接寫入 `src/products.json`，上傳的圖片存到 `public/assets/products/`。
+後台 API 由 `vite-plugin-admin.js` 提供，**只在開發模式運作**；正式網站是靜態檔案，`#/admin` 只會顯示提示。
+改完商品後請 commit `src/products.json` 與新圖片，再 `npm run build` 部署。
 
 - **蝦皮**：請將每個商品的 `shopeeUrl: ''` 填上實際的 `https://shopee.tw/...` 商品網址。
-- **售價**：因尚未提供實際價格，頁面僅顯示「價格請見蝦皮賣場」。
+- **售價**：後台售價留空時，頁面顯示「價格請見蝦皮賣場」。
 - **圖片**：`assets/baby-shoes.jpg` 和 `assets/princess-shoes.jpg` （位於 `public/assets/`）由使用者提供之商品宣傳圖局部裁切而成。請使用高畫質、已授權實品照取代後再正式上線。
 - **系列**：每一系列的首頁、列表、詳情獨立，沒有混合商品。
 
@@ -47,7 +60,7 @@ npm run preview  # 預覽 build 結果
 
 這是一套可點擊、可用於展示的前端靜態網站，含 RWD、系列路由、商品列表、簡易顏色篩選、商品詳情、品牌故事、尺寸指南及連至蝦皮的預留功能。
 
-**尚未含**：真實訂單、付款、會員登入、CMS 後台、資料庫、蝦皮訂單或庫存 API。收藏按鈕僅在當前頁面有效。商品尺寸與促銷資訊尚未驗證，未自行添加未確認優惠活動。
+**尚未含**：真實訂單、付款、會員登入、線上後台與資料庫（目前後台僅限本機使用）、蝦皮訂單或庫存 API。收藏按鈕僅在當前頁面有效。商品尺寸與促銷資訊尚未驗證，未自行添加未確認優惠活動。
 
 ## 使用與授權
 

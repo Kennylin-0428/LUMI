@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
-import { products, series, SHOPEE_URL_RE } from '../data.js';
+import { formatPrice, products, series, SHOPEE_URL_RE } from '../data.js';
 import Breadcrumbs from '../components/Breadcrumbs.jsx';
 import SectionHeading from '../components/SectionHeading.jsx';
 import NotFound from './NotFound.jsx';
@@ -18,12 +18,20 @@ function ProductDetailInner({ product: p }) {
   const [color, setColor] = useState(p.colors[0]);
   const [size, setSize] = useState(null);
   const [notice, setNotice] = useState('');
+  const gallery = [p.image, ...p.images].filter(Boolean);
+  const [photo, setPhoto] = useState(gallery[0]);
+  const soldOut = p.soldOutSizes;
+  const info = [
+    ['商品描述', p.description],
+    ['材質', p.material],
+    ['保養方式', p.care],
+  ].filter(([, text]) => text);
 
   const buy = () => {
     if (SHOPEE_URL_RE.test(p.shopeeUrl)) {
       window.open(p.shopeeUrl, '_blank', 'noopener,noreferrer');
     } else {
-      setNotice('尚未設定此商品的蝦皮連結。請在 src/data.js 的 products 中填入 shopeeUrl。');
+      setNotice('尚未設定此商品的蝦皮連結。請在商品後台填入蝦皮商品連結。');
     }
   };
 
@@ -38,18 +46,37 @@ function ProductDetailInner({ product: p }) {
       />
       <div className="wrap">
         <section className="detail-layout">
-          <div className="detail-photo">
-            <img src={p.image} alt={`${p.name}商品照片`} />
+          <div>
+            <div className="detail-photo">
+              <img src={photo} alt={`${p.name}商品照片`} />
+            </div>
+            {gallery.length > 1 && (
+              <div className="detail-thumbs" role="group" aria-label="商品圖片">
+                {gallery.map((src, i) => (
+                  <button
+                    type="button"
+                    key={src}
+                    className={photo === src ? 'active' : ''}
+                    aria-pressed={photo === src}
+                    aria-label={`第 ${i + 1} 張圖片`}
+                    onClick={() => setPhoto(src)}
+                  >
+                    <img src={src} alt="" />
+                  </button>
+                ))}
+              </div>
+            )}
           </div>
           <div className="detail-info">
             <span className={`tag ${p.series === 'princess' ? 'pink' : ''}`}>{d.name}</span>
             <h1>{p.name}</h1>
             <p>{p.subtitle}</p>
-            <div className="large-price">價格請見蝦皮賣場</div>
+            <div className="large-price">{formatPrice(p.price)}</div>
+            {p.sku && <div className="detail-sku">料號：{p.sku}</div>}
             <div className="option-label">顏色選擇</div>
             <Swatches options={p.colors} value={color} onChange={setColor} />
             <div className="option-label">尺寸參考</div>
-            <Swatches options={p.sizes} value={size} onChange={setSize} />
+            <Swatches options={p.sizes} value={size} onChange={setSize} disabled={soldOut} />
             <p>
               <Link to="/size-guide" style={{ textDecoration: 'underline' }}>查看尺寸指南 →</Link>
             </p>
@@ -60,6 +87,16 @@ function ProductDetailInner({ product: p }) {
             <p role="status" style={notice ? { color: '#ae6478' } : undefined}>{notice}</p>
           </div>
         </section>
+        {info.length > 0 && (
+          <section className="detail-info-blocks">
+            {info.map(([title, text]) => (
+              <div className="detail-info-block" key={title}>
+                <h2>{title}</h2>
+                <p>{text}</p>
+              </div>
+            ))}
+          </section>
+        )}
         {/* <section className="section">
           <SectionHeading eyebrow="PRODUCT DETAILS" title="商品特色" />
           <div className="detail-facts">
@@ -77,20 +114,25 @@ function ProductDetailInner({ product: p }) {
   );
 }
 
-function Swatches({ options, value, onChange }) {
+function Swatches({ options, value, onChange, disabled = [] }) {
   return (
     <div className="swatches">
-      {options.map((o) => (
-        <button
-          type="button"
-          key={o}
-          className={`swatch ${value === o ? 'active' : ''}`}
-          aria-pressed={value === o}
-          onClick={() => onChange(o)}
-        >
-          {o}
-        </button>
-      ))}
+      {options.map((o) => {
+        const off = disabled.includes(o);
+        return (
+          <button
+            type="button"
+            key={o}
+            className={`swatch ${value === o ? 'active' : ''} ${off ? 'sold-out' : ''}`}
+            aria-pressed={value === o}
+            disabled={off}
+            onClick={() => onChange(o)}
+          >
+            {o}
+            {off && <small>售完</small>}
+          </button>
+        );
+      })}
     </div>
   );
 }

@@ -1,7 +1,7 @@
 import PicturePuzzle from './pages/PicturePuzzle.jsx';
 import Partnership from './pages/Partnership.jsx';
 import MemoryGame from './pages/MemoryGame.jsx';
-import { useEffect } from 'react';
+import { lazy, Suspense, useEffect } from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom';
 import Header from './components/Header.jsx';
 import Footer from './components/Footer.jsx';
@@ -16,6 +16,8 @@ import Sitemap from './pages/Sitemap.jsx';
 import NotFound from './pages/NotFound.jsx';
 import ShoeFinder from './pages/ShoeFinder.jsx';
 
+const AdminApp = lazy(() => import('./admin/AdminApp.jsx'));
+
 const TITLES = {
   '': '首頁',
   collections: '系列總覽',
@@ -28,6 +30,7 @@ const TITLES = {
   'shoe-finder': '選鞋小旅程',
   'memory-game': 'LUMI 翻翻樂',
   'picture-puzzle': 'LUMI 日常拼圖',
+  admin: '商品後台',
 };
 
 export default function App() {
@@ -47,6 +50,16 @@ export default function App() {
     }
     window.scrollTo(0, 0);
   }, [pathname, hash]);
+
+  if (section === 'admin') {
+    return (
+      <Suspense fallback={null}>
+        <Routes>
+          <Route path="/admin/*" element={<AdminApp />} />
+        </Routes>
+      </Suspense>
+    );
+  }
 
   return (
     <>

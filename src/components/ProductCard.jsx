@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { series } from '../data.js';
+import { formatPrice, series } from '../data.js';
 
 export default function ProductCard({ product: p }) {
   // 收藏僅為示意功能，只存在於當前頁面
@@ -27,7 +27,7 @@ export default function ProductCard({ product: p }) {
         <span className={`tag ${p.series === 'princess' ? 'pink' : ''}`}>{series[p.series].name}</span>
         <h3>{p.name}</h3>
         <p>{p.subtitle}</p>
-        <div className="price">價格請見蝦皮賣場</div>
+        <div className="price">{formatPrice(p.price)}</div>
         <Link className={`small-btn ${p.series === 'baby' ? 'baby' : ''}`} to={url}>
           查看商品詳情 →
         </Link>

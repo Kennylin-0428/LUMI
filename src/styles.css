@@ -260,3 +260,17 @@
 .puzzle-actions{flex-wrap:wrap}
 
 .puzzle-hint-actions{display:flex;flex-direction:column;align-items:stretch;gap:4px}.puzzle-hint-actions .memory-reset{width:100%;text-align:center}
+
+/* 商品詳情：多圖、料號、售完尺碼、描述區塊（由後台資料產生） */
+.detail-thumbs{display:flex;gap:10px;margin-top:12px;flex-wrap:wrap}
+.detail-thumbs button{width:72px;height:72px;padding:0;border-radius:14px;overflow:hidden;border:2px solid transparent;background:#f9f1ed}
+.detail-thumbs button.active{border-color:#c18295}
+.detail-thumbs img{width:100%;height:100%;object-fit:cover}
+.detail-sku{font-size:12px;color:var(--muted);margin:-12px 0 8px}
+.swatch.sold-out{color:#c2b2ad;background:#f7f2f0;border-style:dashed;text-decoration:line-through;cursor:not-allowed}
+.swatch.sold-out small{margin-left:5px;font-size:11px;text-decoration:none;display:inline-block}
+.detail-info-blocks{display:grid;gap:16px;margin:0 0 60px}
+.detail-info-block{background:#fff;border:1px solid var(--line);border-radius:22px;padding:24px 28px}
+.detail-info-block h2{font-size:17px;color:#78574f;margin:0 0 8px}
+.detail-info-block p{white-space:pre-line;color:#8f7872;font-size:14px;margin:0}
+@media(max-width:730px){.detail-thumbs button{width:58px;height:58px}.detail-info-block{padding:18px 20px}}
