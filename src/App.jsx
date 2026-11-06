@@ -1,3 +1,4 @@
+import MemoryGame from './pages/MemoryGame.jsx';
 import { useEffect } from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom';
 import Header from './components/Header.jsx';
@@ -22,6 +23,7 @@ const TITLES = {
   'size-guide': '尺寸指南',
   sitemap: '網站架構',
   'shoe-finder': '選鞋小旅程',
+  'memory-game': 'LUMI 翻翻樂',
 };
 
 export default function App() {
@@ -49,6 +51,7 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/collections" element={<Collections />} />
+          <Route path="/memory-game" element={<MemoryGame />} />
           <Route path="/shoe-finder" element={<ShoeFinder />} />
           <Route path="/:seriesKey" element={<SeriesIntro />} />
           <Route path="/:seriesKey/products" element={<ProductList />} />

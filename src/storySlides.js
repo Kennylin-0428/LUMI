@@ -1,0 +1,18 @@
+export const storySlides = [
+  { src: '/assets/lumi-mascot-party.png', alt: 'LUMI 吉祥物參加溫馨派對' },
+  { src: '/assets/lumi-mascot-park.png', alt: 'LUMI 吉祥物的公園時光' },
+  { src: '/assets/lumi-mascot-beach.png', alt: 'LUMI 吉祥物在海邊拾貝' },
+  { src: '/assets/lumi-mascot-bookshop.png', alt: 'LUMI 吉祥物在溫馨書店閱讀' },
+  { src: '/assets/lumi-mascot-florist.png', alt: 'LUMI 吉祥物在花店挑花' },
+  { src: '/assets/lumi-mascot-school.png', alt: 'LUMI 吉祥物的學校日常' },
+  { src: '/assets/lumi-mascot-wedding.png', alt: 'LUMI 吉祥物擔任婚禮小花童' },
+  { src: '/assets/lumi-mascot-christmas.png', alt: 'LUMI 吉祥物的溫馨聖誕節' },
+  { src: '/assets/lumi-mascot-halloween.png', alt: 'LUMI 吉祥物的可愛萬聖節' },
+  { src: '/assets/lumi-mascot-piano.png', alt: 'LUMI 吉祥物的鋼琴演奏會' },
+  { src: '/assets/lumi-mascot-violin.png', alt: 'LUMI 吉祥物的小提琴演奏會' },
+  { src: '/assets/lumi-mascot-ballet.png', alt: 'LUMI 吉祥物的芭蕾謝幕' },
+  { src: '/assets/lumi-mascot-new-year.png', alt: 'LUMI 吉祥物的過年拜年' },
+  { src: '/assets/lumi-mascot-running.png', alt: 'LUMI 吉祥物在公園跑步' },
+  { src: '/assets/lumi-mascot-slide.png', alt: 'LUMI 吉祥物溜滑梯' },
+  { src: '/assets/lumi-mascot-amusement-park.png', alt: 'LUMI 吉祥物的樂園出遊' },
+];

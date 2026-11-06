@@ -5,6 +5,7 @@ import SectionHeading from '../components/SectionHeading.jsx';
 const PANELS = [
   ['寶寶鞋系列', [['/baby', '系列介紹與商品'], ['/baby/product/baby-candy', '商品詳情｜糖果跑跑款']]],
   ['公主鞋系列', [['/princess', '系列介紹與商品'], ['/princess/product/princess-lace', '商品詳情｜珍珠蕾絲款']]],
+  ['互動體驗', [['/memory-game', 'LUMI 翻翻樂'], ['/shoe-finder', '選鞋小旅程']]],
   ['品牌頁面', [['/', '首頁'], ['/collections', '系列總覽'], ['/story', '關於 LUMI'], ['/size-guide', '尺寸指南']]],
 ];
 

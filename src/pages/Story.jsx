@@ -1,27 +1,11 @@
+import { storySlides } from '../storySlides.js';
 import SelectionTiers from '../components/SelectionTiers.jsx';
 import StoryCarousel from '../components/StoryCarousel.jsx';
 import Breadcrumbs from '../components/Breadcrumbs.jsx';
 import PillButton from '../components/PillButton.jsx';
 import SectionHeading from '../components/SectionHeading.jsx';
 
-const STORY_SLIDES = [
-  { src: '/assets/lumi-mascot-party.png', alt: 'LUMI 吉祥物參加溫馨派對' },
-  { src: '/assets/lumi-mascot-park.png', alt: 'LUMI 吉祥物的公園時光' },
-  { src: '/assets/lumi-mascot-beach.png', alt: 'LUMI 吉祥物在海邊拾貝' },
-  { src: '/assets/lumi-mascot-bookshop.png', alt: 'LUMI 吉祥物在溫馨書店閱讀' },
-  { src: '/assets/lumi-mascot-florist.png', alt: 'LUMI 吉祥物在花店挑花' },
-  { src: '/assets/lumi-mascot-school.png', alt: 'LUMI 吉祥物的學校日常' },
-  { src: '/assets/lumi-mascot-wedding.png', alt: 'LUMI 吉祥物擔任婚禮小花童' },
-  { src: '/assets/lumi-mascot-christmas.png', alt: 'LUMI 吉祥物的溫馨聖誕節' },
-  { src: '/assets/lumi-mascot-halloween.png', alt: 'LUMI 吉祥物的可愛萬聖節' },
-  { src: '/assets/lumi-mascot-piano.png', alt: 'LUMI 吉祥物的鋼琴演奏會' },
-  { src: '/assets/lumi-mascot-violin.png', alt: 'LUMI 吉祥物的小提琴演奏會' },
-  { src: '/assets/lumi-mascot-ballet.png', alt: 'LUMI 吉祥物的芭蕾謝幕' },
-  { src: '/assets/lumi-mascot-new-year.png', alt: 'LUMI 吉祥物的過年拜年' },
-  { src: '/assets/lumi-mascot-running.png', alt: 'LUMI 吉祥物在公園跑步' },
-  { src: '/assets/lumi-mascot-slide.png', alt: 'LUMI 吉祥物溜滑梯' },
-  { src: '/assets/lumi-mascot-amusement-park.png', alt: 'LUMI 吉祥物的樂園出遊' },
-];
+
 
 export default function Story() {
   return (
@@ -38,9 +22,9 @@ export default function Story() {
             <div className="intro-highlights" aria-label="品牌選品方向">
               <span>日常百搭</span><span>質感嚴選</span><span>精緻珍藏</span>
             </div>
-            <PillButton to="/collections">看看 LUMI 的系列</PillButton>
+            <div className="hero-actions"><PillButton to="/collections">看看 LUMI 的系列</PillButton><PillButton to="/memory-game" className="secondary">玩玩 LUMI 翻翻樂 ♡</PillButton></div>
           </div>
-          <StoryCarousel slides={STORY_SLIDES} label="LUMI 吉祥物的日常" />
+          <StoryCarousel slides={storySlides} label="LUMI 吉祥物的日常" />
         </div>
       </section>
       <section className="wrap section">

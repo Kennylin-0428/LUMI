@@ -143,3 +143,56 @@
 @media(max-width:730px){.series-photo-flower{left:-10px;width:48px;height:48px;bottom:88px}.series-photo-dust{left:0;font-size:20px}.series-photo-ribbon{right:27px;width:19px;height:36px}}
 
 .story-carousel-controls{width:max-content;max-width:calc(100% - 20px)}.story-carousel-dots{flex-wrap:wrap;justify-content:center}
+
+/* LUMI memory game */
+.memory-page{max-width:1000px;padding-bottom:25px}
+.memory-intro{text-align:center;padding:25px 0 28px}
+.memory-intro h1{font-size:clamp(30px,5vw,44px);color:#79574e;margin:10px 0}
+.memory-intro p{color:#947b76;margin:0 0 12px}
+.memory-instructions{display:block;max-width:560px;margin:auto;font-size:13px;line-height:1.9;color:#9c8880}
+.memory-levels{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-bottom:25px}
+.memory-levels button{display:flex;align-items:center;gap:14px;border:1px solid #e8dcd5;border-radius:20px;background:#fffcf9;text-align:left;padding:18px;color:#8d766d;transition:background .2s}
+.memory-levels button[aria-current=step]{background:#fbe8ed;border-color:#d7a9b7;color:#9b6276}
+.memory-levels button:disabled{opacity:.55;cursor:not-allowed}
+.memory-level-number{font:italic 28px Georgia,serif}
+.memory-levels small{display:block;font-size:11px;font-weight:400;margin-top:4px}
+.memory-play-area{padding:30px;background:linear-gradient(145deg,#fffaf5,#fff3f6 70%,#f1f6fa);border:1px solid #eddfd7;border-radius:30px;box-shadow:0 10px 35px #8a70630a}
+.memory-toolbar{display:flex;justify-content:space-between;gap:20px;align-items:center}
+.memory-toolbar h2{margin:4px 0;color:#79574e;font-size:25px}
+.memory-toolbar p{font-size:13px;color:#9b8279;margin:4px 0 14px}
+.memory-stats{display:flex;gap:25px;flex-shrink:0;text-align:center}
+.memory-stats span{font-size:11px;color:#9b8279}
+.memory-stats strong{display:block;font-size:24px;line-height:1.5;color:#b3778b;font-variant-numeric:tabular-nums}
+.memory-progress{height:6px;background:#eddfda;border-radius:10px;overflow:hidden;margin:8px 0}
+.memory-progress>span{display:block;height:100%;background:#d0a3b3;transition:width .3s}
+.memory-feedback{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:58px;margin-bottom:10px}
+.memory-feedback p{font-size:12px;color:#907770;margin:8px 0}
+.memory-reset{border:0;background:transparent;color:#a16c80;text-decoration:underline;text-underline-offset:4px;white-space:nowrap;font-size:12px;padding:10px 0}
+.memory-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;max-width:760px;margin:auto}
+.memory-card{display:block;min-width:0;aspect-ratio:1;padding:0;border:0;border-radius:19px;background:transparent;perspective:900px;touch-action:manipulation;-webkit-tap-highlight-color:transparent}
+.memory-card-inner{position:relative;display:block;width:100%;height:100%;transform-style:preserve-3d;transition:transform .42s}
+.memory-card.is-revealed .memory-card-inner{transform:rotateY(180deg)}
+.memory-card-back,.memory-card-front{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;border-radius:19px;overflow:hidden;border:4px solid #fffdfb;box-shadow:0 4px 12px #947b7615}
+.memory-card-back{display:flex;flex-direction:column;justify-content:center;align-items:center;gap:3px;background:radial-gradient(ellipse at top left,#fff7ea,transparent),linear-gradient(135deg,#efd5df,#f6e6eb);color:#b67f93;outline:1px solid #e8cfd8;outline-offset:-10px}
+.memory-card:nth-child(4n+2) .memory-card-back{background:linear-gradient(140deg,#e5f0f7,#edf3f6);color:#8aa8bc}
+.memory-card:nth-child(4n+3) .memory-card-back{background:linear-gradient(140deg,#fff0d3,#faf1e5);color:#b6a078}
+.memory-card-back b{font-family:Georgia,serif;font-size:clamp(18px,3vw,28px);letter-spacing:4px;font-weight:400}
+.memory-card-back small{font-size:10px;letter-spacing:1px}
+.memory-card-back>span{font-size:20px;line-height:1.3}
+.memory-card-front{transform:rotateY(180deg);background:#fff9f5}
+.memory-card-front img{width:100%;height:100%;object-fit:cover;user-select:none}
+.memory-card.is-matched .memory-card-front{border-color:#c9d9bc}
+.memory-match-check{position:absolute;right:6px;bottom:6px;width:23px;height:23px;border-radius:50%;background:#f7fff1;color:#728b61;font-size:14px;display:grid;place-items:center}
+.memory-card[aria-disabled=true]{cursor:default}
+.memory-card:focus-visible,.memory-levels button:focus-visible,.memory-reset:focus-visible{outline:3px solid #af7e94;outline-offset:4px}
+.memory-result{text-align:center;margin-top:28px;padding:28px 18px;border:1px solid #ead4dc;border-radius:22px;background:#fffcf7}
+.memory-result-icon{color:#c294a4;letter-spacing:8px;font-size:25px}
+.memory-result h2{font-size:clamp(20px,3vw,27px);color:#805e55;margin:10px 0}
+.memory-result p{font-size:13px;color:#927b73}
+.memory-result-actions{display:flex;justify-content:center;flex-wrap:wrap;gap:12px;margin-top:20px}
+.memory-footer{text-align:center;font-size:12px;color:#a08b81;margin:25px 0}.memory-footer a{display:block;color:#a77186;margin-top:8px}
+@media(max-width:730px){.memory-intro{padding-top:15px}.memory-levels{gap:7px}.memory-levels button{flex-direction:column;align-items:flex-start;padding:12px 10px;gap:5px;border-radius:15px;font-size:12px}.memory-level-number{font-size:22px}.memory-levels small{font-size:10px}.memory-play-area{padding:18px 12px;border-radius:22px}.memory-toolbar{gap:12px;align-items:flex-start}.memory-toolbar h2{font-size:21px}.memory-toolbar p{font-size:11px}.memory-stats{gap:12px}.memory-stats strong{font-size:20px}.memory-stats span{font-size:10px}.memory-grid{gap:8px}.memory-card,.memory-card-back,.memory-card-front{border-radius:12px}.memory-card-back,.memory-card-front{border-width:2px}.memory-card-back{outline-offset:-6px}.memory-card-back b{font-size:17px;letter-spacing:2px}.memory-card-back small{font-size:8px;letter-spacing:0}.memory-card-back>span{font-size:14px}.memory-feedback{gap:8px}.memory-feedback p{font-size:11px}.memory-reset{font-size:11px}.memory-match-check{width:18px;height:18px;font-size:11px;right:3px;bottom:3px}}
+@media(max-width:370px){.memory-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.memory-toolbar{flex-direction:column}.memory-stats{align-self:flex-end}.memory-feedback{align-items:flex-start}}
+@media(prefers-reduced-motion:reduce){.memory-card-inner,.memory-progress>span,.memory-levels button{transition:none}}
+
+.site-header nav .header-game{background:#86a8bc}.site-header nav .header-game:hover{background:#779bb0;box-shadow:0 8px 20px #86a8bc30}.site-header nav .header-game.active{background:#779bb0;color:white;box-shadow:inset 0 0 0 2px #ffffff70}.site-header nav .header-game.active::after{display:none}

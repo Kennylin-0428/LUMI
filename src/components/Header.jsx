@@ -8,6 +8,7 @@ const NAV = [
   ['princess', '/princess', '公主鞋系列'],
   ['story', '/story', '關於 LUMI'],
   ['size-guide', '/size-guide', '尺寸指南'],
+  ['memory-game', '/memory-game', 'LUMI 翻翻樂'],
 ];
 
 export default function Header({ section }) {
@@ -36,7 +37,7 @@ export default function Header({ section }) {
         </button>
         <nav id="site-nav" className={open ? 'open' : ''} aria-label="主要導覽">
           {NAV.map(([key, to, label]) => (
-            <Link key={key} to={to} className={section === key ? 'active' : ''}>
+            <Link key={key} to={to} className={`${key === 'memory-game' ? 'header-cta header-game' : ''} ${section === key ? 'active' : ''}`}>
               {label}
             </Link>
           ))}
