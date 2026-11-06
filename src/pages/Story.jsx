@@ -7,6 +7,9 @@ import SectionHeading from '../components/SectionHeading.jsx';
 const STORY_SLIDES = [
   { src: '/assets/lumi-mascot-party.png', alt: 'LUMI 吉祥物參加溫馨派對' },
   { src: '/assets/lumi-mascot-park.png', alt: 'LUMI 吉祥物的公園時光' },
+  { src: '/assets/lumi-mascot-beach.png', alt: 'LUMI 吉祥物在海邊拾貝' },
+  { src: '/assets/lumi-mascot-bookshop.png', alt: 'LUMI 吉祥物在溫馨書店閱讀' },
+  { src: '/assets/lumi-mascot-florist.png', alt: 'LUMI 吉祥物在花店挑花' },
 ];
 
 export default function Story() {
