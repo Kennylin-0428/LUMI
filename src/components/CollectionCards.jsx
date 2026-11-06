@@ -18,7 +18,7 @@ const CARDS = [
     desc: '精緻花飾・挺版鞋型・浪漫甜美',
     image: series.princess.image,
     alt: '精緻花飾公主鞋系列',
-    colors: '奶白／甜粉',
+    colors: '珍珠白／甜粉',
   },
 ];
 

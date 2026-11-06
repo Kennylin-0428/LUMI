@@ -2,14 +2,8 @@ import { ASSETS } from '../data.js';
 import PillButton from '../components/PillButton.jsx';
 import SectionHeading from '../components/SectionHeading.jsx';
 import CollectionCards from '../components/CollectionCards.jsx';
-import FeatureRow from '../components/FeatureRow.jsx';
+import PromiseCards from '../components/PromiseCards.jsx';
 import Banner from '../components/Banner.jsx';
-
-const PROMISES = [
-  ['☁', '自在日常', '陪孩子探索生活裡的每一個新發現。'],
-  ['✧', '溫柔選品', '挑選富有童趣與質感的可愛鞋款。'],
-  ['♡', '珍藏時刻', '讓穿搭成為每一段成長回憶的點綴。'],
-];
 
 export default function Home() {
   return (
@@ -38,8 +32,8 @@ export default function Home() {
         <CollectionCards />
       </section>
       <section className="wrap section">
-        <SectionHeading eyebrow="OUR LITTLE PROMISE" title="小小的鞋子，大大的喜歡" />
-        <FeatureRow features={PROMISES} />
+        <SectionHeading eyebrow="OUR LITTLE PROMISE" title="選一雙鞋，也放一點心思" />
+        <PromiseCards />
       </section>
       <Banner
         eyebrow="A LITTLE HELP"
