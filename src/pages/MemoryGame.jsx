@@ -42,7 +42,7 @@ export default function MemoryGame() {
           ))}
         </nav>
         <MemoryRound key={`${level}-${round}`} level={level} onComplete={complete} onRestart={() => start(level)} onNext={() => start(level + 1)} onReplay={() => start(0)} />
-        <p className="memory-footer">沒有時間限制，也不用急著答對！陪露米慢慢玩就好～<Link to="/story">認識露米的日常 →</Link></p>
+        <p className="memory-footer">沒有時間限制，也不用急著答對！陪露米慢慢玩就好～<Link to="/picture-puzzle">試試LUMI 日常拼圖 →</Link><Link to="/story">認識露米的日常 →</Link></p>
       </section>
     </>
   );

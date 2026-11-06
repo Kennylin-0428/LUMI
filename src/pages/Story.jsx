@@ -22,7 +22,9 @@ export default function Story() {
             <div className="intro-highlights" aria-label="品牌選品方向">
               <span>日常百搭</span><span>質感嚴選</span><span>精緻珍藏</span>
             </div>
-            <div className="hero-actions"><PillButton to="/collections">看看 LUMI 的系列</PillButton><PillButton to="/memory-game" className="secondary">玩玩 LUMI 翻翻樂 ♡</PillButton></div>
+            <div className="story-actions">
+              <div><PillButton to="/collections">看看 LUMI 的系列</PillButton></div>
+            </div>
           </div>
           <StoryCarousel slides={storySlides} label="LUMI 吉祥物的日常" />
         </div>

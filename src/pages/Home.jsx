@@ -37,6 +37,27 @@ export default function Home() {
         <SectionHeading eyebrow="OUR LITTLE PROMISE" title="選一雙鞋，也放一點心思" />
         <PromiseCards />
       </section>
+      <section className="story-experience-panel" aria-labelledby="story-experience-title">
+        <header>
+          <span className="eyebrow">A LITTLE TIME WITH LUMI</span>
+          <h2 id="story-experience-title">和露米玩一會兒</h2>
+          <p>找找喜歡的鞋，或用小遊戲認識露米的日常。</p>
+        </header>
+        <nav className="story-experiences" aria-label="LUMI 互動體驗">
+          <div>
+            <PillButton to="/shoe-finder" className="experience-finder">選鞋小旅程 ♡</PillButton>
+            <p>回答幾個小問題，尋找適合的鞋款靈感。</p>
+          </div>
+          <div>
+            <PillButton to="/memory-game" className="experience-memory">LUMI 翻翻樂 ♡</PillButton>
+            <p>翻開卡片找相同圖片，挑戰三個關卡。</p>
+          </div>
+          <div>
+            <PillButton to="/picture-puzzle" className="experience-puzzle">LUMI 日常拼圖 ✧</PillButton>
+            <p>拼回完整日常，揭曉露米穿的鞋款。</p>
+          </div>
+        </nav>
+      </section>
       <Banner
         eyebrow="A LITTLE HELP"
         title="寶貝尺寸怎麼選？"

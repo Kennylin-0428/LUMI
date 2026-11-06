@@ -10,6 +10,7 @@ const NAV = [
   ['size-guide', '/size-guide', '尺寸指南'],
   ['partnership', '/partnership', '合作洽詢'],
   ['memory-game', '/memory-game', 'LUMI 翻翻樂'],
+  ['picture-puzzle', '/picture-puzzle', 'LUMI 日常拼圖'],
 ];
 
 export default function Header({ section }) {
@@ -38,7 +39,7 @@ export default function Header({ section }) {
         </button>
         <nav id="site-nav" className={open ? 'open' : ''} aria-label="主要導覽">
           {NAV.map(([key, to, label]) => (
-            <Link key={key} to={to} className={`${key === 'memory-game' ? 'header-cta header-game' : ''} ${section === key ? 'active' : ''}`}>
+            <Link key={key} to={to} className={`${key === 'memory-game' ? 'header-cta header-game' : key === 'picture-puzzle' ? 'header-cta header-puzzle' : ''} ${section === key ? 'active' : ''}`}>
               {label}
             </Link>
           ))}
