@@ -245,7 +245,7 @@
 .puzzle-tile.is-selected{box-shadow:inset 0 0 0 5px #d790ac;z-index:1}.puzzle-tile.is-selected span{background:#bd7c8c;color:white}
 .puzzle-board.is-complete{gap:0}.puzzle-board.is-complete .puzzle-tile{cursor:default}
 .puzzle-tip{font-size:12px;color:#9b8580;text-align:center;max-width:530px;margin:18px auto 0}
-.puzzle-reference{margin:0 auto 24px;max-width:220px;text-align:center}.puzzle-reference img{width:100%;border:5px solid white;border-radius:17px;box-shadow:0 5px 18px #9b7d7612}.puzzle-reference figcaption{font-size:11px;color:#9b8580;margin-top:6px}
+.puzzle-reference{margin:0 auto 24px;max-width:220px;text-align:center}.puzzle-reference img{width:100%;height:auto;aspect-ratio:1 / 1;object-fit:contain;border:5px solid white;border-radius:17px;box-shadow:0 5px 18px #9b7d7612}.puzzle-reference figcaption{font-size:11px;color:#9b8580;margin-top:6px}
 .puzzle-reveal{margin-top:30px;padding:28px;border:1px solid #ead7da;background:#fffcf7;border-radius:24px}.puzzle-reveal-heading{text-align:center}.puzzle-reveal h2{color:#805e55;font-size:clamp(22px,3vw,29px);margin:8px 0}.puzzle-reveal p{font-size:13px;color:#947a72}
 .puzzle-product{display:grid;grid-template-columns:minmax(0,220px) minmax(0,1fr);gap:25px;align-items:center;margin-top:24px}.puzzle-product>img{width:100%;height:auto;aspect-ratio:1;object-fit:cover;border-radius:20px;background:#f9eee7}.puzzle-product h3{color:#805e55;font-size:22px;margin:10px 0}.puzzle-product .pill-btn{font-size:13px;margin-top:8px}
 .puzzle-tile:focus-visible,.puzzle-settings button:focus-visible,.puzzle-settings select:focus-visible{outline:3px solid #ad718c;outline-offset:3px;z-index:2}
@@ -256,3 +256,7 @@
 
 .story-actions{display:flex;flex-direction:column;gap:18px;margin-top:30px} .story-experience-panel{width:calc(100% - 48px);max-width:1142px;margin:30px auto 0;padding:30px;border:1px solid #e7d7cd;border-radius:26px;background:#fffcf7;text-align:center}.story-experience-panel h2{margin:6px 0;color:#805e55;font-size:25px}.story-experience-panel p{font-size:13px;color:#957e74;margin:8px 0}.story-experiences{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;margin-top:24px}.story-experiences .pill-btn{padding:12px 22px;font-size:13px;color:#fff}.story-experiences p{font-size:12px;line-height:1.8;margin:12px auto 0;max-width:230px}.story-experiences .experience-finder{background:#bd7c8c}.story-experiences .experience-memory{background:#86a8bc}.story-experiences .experience-puzzle{background:#8fa589}
 @media(max-width:730px){.story-experience-panel{width:calc(100% - 34px);padding:25px 18px}.story-experiences{grid-template-columns:1fr;gap:24px}.story-experience-panel h2{font-size:23px}}
+
+.puzzle-actions{flex-wrap:wrap}
+
+.puzzle-hint-actions{display:flex;flex-direction:column;align-items:stretch;gap:4px}.puzzle-hint-actions .memory-reset{width:100%;text-align:center}
