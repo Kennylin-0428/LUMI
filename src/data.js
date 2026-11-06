@@ -29,7 +29,7 @@ export const series = {
     eyebrow: 'BABY COLLECTION',
     tagline: '童趣相伴，輕鬆迎接每一天',
     description: '童趣外型搭配便利穿脫設計，陪伴寶貝走出充滿驚喜的每一天。',
-    image: '/assets/bc系列1.svg',
+    image: 'assets/bc系列1.svg',
     features: [
       ['✦', '童趣外型', '用可愛的小細節，陪伴寶貝的日常。'],
       ['☁', '穿脫便利', '輕鬆穿上喜歡的鞋，準備迎接小美好。'],
@@ -41,7 +41,7 @@ export const series = {
     eyebrow: 'PRINCESS COLLECTION',
     tagline: '精緻花飾，珍藏閃耀小日常',
     description: '精緻鞋頭花飾搭配挺版飽滿鞋型，展現甜美優雅氣質，為每一次精心打扮增添亮點。',
-    image: '/assets/pc系列1.svg',
+    image: 'assets/pc系列1.svg',
     features: [
       ['❀', '精緻花飾', '細緻花飾點綴鞋頭，為每一雙公主鞋添上甜美亮點。'],
       ['♕', '挺版飽滿鞋型', '挺版輪廓搭配飽滿鞋頭，勾勒出優雅可愛的公主鞋模樣。'],

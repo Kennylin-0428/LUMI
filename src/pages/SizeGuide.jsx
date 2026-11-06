@@ -11,12 +11,12 @@ const STEPS = [
 const SIZE_CHARTS = [
   {
     title: '公主鞋尺寸表',
-    src: '/assets/童鞋尺寸表_左右欄位修正.svg',
+    src: 'assets/童鞋尺寸表_左右欄位修正.svg',
     description: '選購公主鞋時，請依此表的內長及適合腳長對照尺碼。',
   },
   {
     title: '寶寶鞋／童鞋尺寸表',
-    src: '/assets/寶寶鞋童鞋尺寸表_左右欄位修正.svg',
+    src: 'assets/寶寶鞋童鞋尺寸表_左右欄位修正.svg',
     description: '選購寶寶鞋／童鞋時，請依此表對照，勿套用公主鞋的尺碼。',
   },
 ];

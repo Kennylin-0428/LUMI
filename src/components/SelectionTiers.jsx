@@ -4,19 +4,19 @@ const SELECTION_TIERS = [
   {
     name: 'LUMI BASIC',
     title: '日常百搭款',
-    image: '/assets/等級標籤1.png',
+    image: 'assets/等級標籤1.png',
     description: '以簡約、好搭配的款式為選品方向，陪伴孩子每天的可愛日常。',
   },
   {
     name: 'LUMI SELECT',
     title: '質感嚴選款',
-    image: '/assets/等級標籤2.png',
+    image: 'assets/等級標籤2.png',
     description: '挑選更有細節與設計美感的款式，讓日常穿搭多一點精緻與特色。',
   },
   {
     name: 'LUMI PREMIUM',
     title: '精緻珍藏款',
-    image: '/assets/等級標籤3.png',
+    image: 'assets/等級標籤3.png',
     description: '以更細緻的外觀與裝飾細節為選品方向，為生日、聚會與值得紀念的時刻，挑選一份特別的可愛。',
   },
 ];

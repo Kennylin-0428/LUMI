@@ -24,7 +24,7 @@ export default function Header({ section }) {
     <header className="site-header">
       <div className="header-inner wrap">
         <Link className="logo header-logo" to="/" aria-label="LUMI 露米首頁">
-          <img className="header-logo-image" src="/assets/logo_圓.png" alt="" width="52" height="52" />
+          <img className="header-logo-image" src="assets/logo_圓.png" alt="" width="52" height="52" />
           <span className="logo-mark">LUMI</span>
           <small>露米</small>
         </Link>
