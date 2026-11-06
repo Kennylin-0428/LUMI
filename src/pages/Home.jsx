@@ -1,3 +1,4 @@
+import StoryCarousel from '../components/StoryCarousel.jsx';
 import SelectionTiers from '../components/SelectionTiers.jsx';
 import PillButton from '../components/PillButton.jsx';
 import SectionHeading from '../components/SectionHeading.jsx';
@@ -18,9 +19,9 @@ export default function Home() {
             <PillButton to="/story" className="secondary">認識 LUMI</PillButton>
           </div>
         </div>
-        <div className="hero-visual hero-mascot">
+        <div className="hero-visual hero-carousel">
           <span className="sparkle float">✦</span>
-          <img src="/assets/lumi-mascot-party.png" alt="LUMI 吉祥物戴著粉色蝴蝶結、穿著公主鞋，參加溫馨派對" width="1254" height="1254" />
+          <StoryCarousel />
         </div>
       </section>
       <section className="wrap section">

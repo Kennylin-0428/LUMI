@@ -4,12 +4,17 @@ import Breadcrumbs from '../components/Breadcrumbs.jsx';
 import PillButton from '../components/PillButton.jsx';
 import SectionHeading from '../components/SectionHeading.jsx';
 
+const STORY_SLIDES = [
+  { src: '/assets/lumi-mascot-party.png', alt: 'LUMI 吉祥物參加溫馨派對' },
+  { src: '/assets/lumi-mascot-park.png', alt: 'LUMI 吉祥物的公園時光' },
+];
+
 export default function Story() {
   return (
     <>
       <Breadcrumbs items={['關於 LUMI']} />
       <section className="wrap">
-        <div className="intro-hero princess">
+        <div className="intro-hero about-lumi">
           <div>
             <span className="eyebrow">HELLO, WE ARE LUMI</span>
             <h1>把日常的小美好，<br />穿在腳上。</h1>
@@ -21,7 +26,7 @@ export default function Story() {
             </div>
             <PillButton to="/collections">看看 LUMI 的系列</PillButton>
           </div>
-          <StoryCarousel />
+          <StoryCarousel slides={STORY_SLIDES} label="LUMI 吉祥物的日常" />
         </div>
       </section>
       <section className="wrap section">

@@ -6,7 +6,7 @@ const SLIDES = [
   { src: ASSETS.baby, alt: 'LUMI 寶寶鞋實品參考' },
 ];
 
-export default function StoryCarousel() {
+export default function StoryCarousel({ slides = SLIDES, label = 'LUMI 鞋款照片' }) {
   const [active, setActive] = useState(0);
   const [paused, setPaused] = useState(false);
   const [hovered, setHovered] = useState(false);
@@ -23,16 +23,16 @@ export default function StoryCarousel() {
 
   useEffect(() => {
     if (paused || hovered || focused || reducedMotion) return;
-    const timer = window.setInterval(() => setActive((index) => (index + 1) % SLIDES.length), 5000);
+    const timer = window.setInterval(() => setActive((index) => (index + 1) % slides.length), 5000);
     return () => window.clearInterval(timer);
-  }, [paused, hovered, focused, reducedMotion, active]);
+  }, [paused, hovered, focused, reducedMotion, active, slides.length]);
 
-  const move = (direction) => setActive((index) => (index + direction + SLIDES.length) % SLIDES.length);
+  const move = (direction) => setActive((index) => (index + direction + slides.length) % slides.length);
 
   return (
     <section
       className="story-carousel"
-      aria-label="LUMI 鞋款照片"
+      aria-label={label}
       aria-roledescription="輪播"
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
@@ -42,8 +42,8 @@ export default function StoryCarousel() {
       }}
     >
       <div className="story-carousel-slides">
-        {SLIDES.map(({ src, alt }, index) => (
-          <div key={src} hidden={active !== index} role="group" aria-roledescription="投影片" aria-label={`${index + 1} / ${SLIDES.length}`}>
+        {slides.map(({ src, alt }, index) => (
+          <div key={src} hidden={active !== index} role="group" aria-roledescription="投影片" aria-label={`${index + 1} / ${slides.length}`}>
             <img src={src} alt={alt} width="600" height="600" />
           </div>
         ))}
@@ -56,7 +56,7 @@ export default function StoryCarousel() {
       </button>
       <div className="story-carousel-controls">
         <div className="story-carousel-dots">
-          {SLIDES.map(({ alt }, index) => (
+          {slides.map(({ alt }, index) => (
             <button key={alt} type="button" aria-label={`顯示${alt}`} aria-current={active === index ? 'true' : undefined} onClick={() => setActive(index)} />
           ))}
         </div>
