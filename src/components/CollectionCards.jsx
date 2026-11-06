@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { ASSETS } from '../data.js';
+import { series } from '../data.js';
 
 const CARDS = [
   {
@@ -7,7 +7,7 @@ const CARDS = [
     eyebrow: 'BABY COLLECTION',
     title: '☁ 寶寶鞋系列',
     desc: '糖果跑跑款・繽紛撞色・日常活力',
-    image: ASSETS.baby,
+    image: series.baby.image,
     alt: '糖果跑跑款寶寶鞋',
     colors: '奶茶米／天空藍／甜心粉／米白色',
   },
@@ -16,7 +16,7 @@ const CARDS = [
     eyebrow: 'PRINCESS COLLECTION',
     title: '♕ 公主鞋系列',
     desc: '珍珠蕾絲款・細緻蝴蝶結・浪漫甜美',
-    image: ASSETS.princess,
+    image: series.princess.image,
     alt: '珍珠蕾絲款公主鞋',
     colors: '奶白／甜粉',
   },

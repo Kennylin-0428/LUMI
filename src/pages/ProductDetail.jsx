@@ -3,7 +3,6 @@ import { Link, useParams } from 'react-router-dom';
 import { products, series, SHOPEE_URL_RE } from '../data.js';
 import Breadcrumbs from '../components/Breadcrumbs.jsx';
 import SectionHeading from '../components/SectionHeading.jsx';
-import SeriesTabs from '../components/SeriesTabs.jsx';
 import NotFound from './NotFound.jsx';
 
 export default function ProductDetail() {
@@ -34,12 +33,10 @@ function ProductDetailInner({ product: p }) {
         items={[
           { label: '系列總覽', to: '/collections' },
           { label: d.name, to: `/${p.series}` },
-          { label: '商品列表', to: `/${p.series}/products` },
           '商品詳情',
         ]}
       />
       <div className="wrap">
-        {/* <SeriesTabs seriesKey={p.series} active="detail" productId={p.id} /> */}
         <section className="detail-layout">
           <div className="detail-photo">
             <img src={p.image} alt={`${p.name}商品照片`} />

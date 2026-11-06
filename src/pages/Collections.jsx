@@ -10,7 +10,7 @@ export default function Collections() {
         <SectionHeading
           eyebrow="TWO LOVELY COLLECTIONS"
           title="系列總覽"
-          desc="分別探索寶寶鞋與公主鞋；兩種商品不會混在同一商品列表。"
+          desc="探索寶寶鞋與公主鞋的系列特色，挑選適合寶貝的可愛款式。"
         />
         <CollectionCards />
       </section>

@@ -25,13 +25,22 @@ const TITLES = {
 };
 
 export default function App() {
-  const { pathname } = useLocation();
+  const { pathname, hash } = useLocation();
   const section = pathname.split('/').filter(Boolean)[0] || '';
 
   useEffect(() => {
     document.title = `${TITLES[section] || 'LUMI'}｜LUMI 露米`;
-    window.scrollTo(0, 0);
   }, [pathname, section]);
+
+  useEffect(() => {
+    if (hash) {
+      const frame = requestAnimationFrame(() => {
+        document.getElementById(hash.slice(1))?.scrollIntoView();
+      });
+      return () => cancelAnimationFrame(frame);
+    }
+    window.scrollTo(0, 0);
+  }, [pathname, hash]);
 
   return (
     <>

@@ -32,7 +32,7 @@ export const series = {
     eyebrow: 'BABY COLLECTION',
     tagline: '輕盈舒適，自在探索每一步',
     description: '繽紛色彩與俏皮設計，陪伴寶貝走出充滿驚喜的每一天。',
-    image: ASSETS.baby,
+    image: '/assets/bc系列1.svg',
     features: [
       ['☁', '透氣網眼', '網眼拼接設計，輕盈又有活力。'],
       ['✦', '雙帶設計', '魔鬼氈設計，穿脫更便利。'],
@@ -44,7 +44,7 @@ export const series = {
     eyebrow: 'PRINCESS COLLECTION',
     tagline: '優雅蕾絲，珍藏閃耀小日常',
     description: '細緻蕾絲、珍珠與蝴蝶結，讓每個值得紀念的日子更加可愛。',
-    image: ASSETS.princess,
+    image: '/assets/pc系列1.svg',
     features: [
       ['♕', '精緻蕾絲', '浪漫蕾絲蝴蝶結，增添柔美層次。'],
       ['✧', '珍珠點綴', '細緻裝飾，呈現溫柔氣質。'],
