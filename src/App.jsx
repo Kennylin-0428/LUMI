@@ -1,3 +1,4 @@
+import Partnership from './pages/Partnership.jsx';
 import MemoryGame from './pages/MemoryGame.jsx';
 import { useEffect } from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom';
@@ -20,6 +21,7 @@ const TITLES = {
   baby: '寶寶鞋系列',
   princess: '公主鞋系列',
   story: '關於 LUMI',
+  partnership: '合作洽詢',
   'size-guide': '尺寸指南',
   sitemap: '網站架構',
   'shoe-finder': '選鞋小旅程',
@@ -56,6 +58,7 @@ export default function App() {
           <Route path="/:seriesKey" element={<SeriesIntro />} />
           <Route path="/:seriesKey/products" element={<ProductList />} />
           <Route path="/:seriesKey/product/:productId" element={<ProductDetail />} />
+          <Route path="/partnership" element={<Partnership />} />
           <Route path="/story" element={<Story />} />
           <Route path="/size-guide" element={<SizeGuide />} />
           <Route path="/sitemap" element={<Sitemap />} />

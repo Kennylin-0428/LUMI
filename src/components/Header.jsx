@@ -8,6 +8,7 @@ const NAV = [
   ['princess', '/princess', '公主鞋系列'],
   ['story', '/story', '關於 LUMI'],
   ['size-guide', '/size-guide', '尺寸指南'],
+  ['partnership', '/partnership', '合作洽詢'],
   ['memory-game', '/memory-game', 'LUMI 翻翻樂'],
 ];
 
