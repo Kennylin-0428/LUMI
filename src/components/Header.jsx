@@ -8,7 +8,6 @@ const NAV = [
   ['princess', '/princess', '公主鞋系列'],
   ['story', '/story', '關於 LUMI'],
   ['size-guide', '/size-guide', '尺寸指南'],
-  ['shoe-finder', '/shoe-finder', '選鞋小旅程'],
 ];
 
 export default function Header({ section }) {
@@ -41,8 +40,8 @@ export default function Header({ section }) {
               {label}
             </Link>
           ))}
+          <Link className="header-cta" to="/shoe-finder">選鞋小旅程 ♡</Link>
         </nav>
-        <Link className="header-cta" to="/shoe-finder">探索鞋款 ♡</Link>
       </div>
     </header>
   );

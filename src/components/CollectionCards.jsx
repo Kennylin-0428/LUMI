@@ -5,7 +5,7 @@ const CARDS = [
   {
     key: 'baby',
     eyebrow: 'BABY COLLECTION',
-    title: '☁ 寶寶鞋系列',
+    title: '寶寶鞋系列',
     desc: '童趣外型・穿脫便利・繽紛撞色',
     image: series.baby.image,
     alt: '童趣外型寶寶鞋系列',
@@ -14,7 +14,7 @@ const CARDS = [
   {
     key: 'princess',
     eyebrow: 'PRINCESS COLLECTION',
-    title: '♕ 公主鞋系列',
+    title: '公主鞋系列',
     desc: '精緻花飾・挺版鞋型・浪漫甜美',
     image: series.princess.image,
     alt: '精緻花飾公主鞋系列',
