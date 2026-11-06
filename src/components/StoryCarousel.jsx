@@ -54,14 +54,14 @@ export default function StoryCarousel({ slides = SLIDES, label = 'LUMI 鞋款照
       <button className="story-carousel-arrow next" type="button" onClick={() => move(1)} aria-label="下一張照片">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m10 6 6 6-6 6" /></svg>
       </button>
-      <div className="story-carousel-controls">
+      {/* <div className="story-carousel-controls">
         <div className="story-carousel-dots">
           {slides.map(({ alt }, index) => (
             <button key={alt} type="button" aria-label={`顯示${alt}`} aria-current={active === index ? 'true' : undefined} onClick={() => setActive(index)} />
           ))}
         </div>
-        {/* {!reducedMotion && <button className="story-carousel-pause" type="button" onClick={() => setPaused((value) => !value)}>{paused ? '播放' : '暫停'}</button>} */}
-      </div>
+        {!reducedMotion && <button className="story-carousel-pause" type="button" onClick={() => setPaused((value) => !value)}>{paused ? '播放' : '暫停'}</button>}
+      </div> */}
     </section>
   );
 }

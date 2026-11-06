@@ -141,3 +141,5 @@
 .series-photo-dust{position:absolute;left:0;top:63px;font-size:25px;color:var(--intro-accent);pointer-events:none}
 .series-hero-visual::after{content:'';position:absolute;right:39px;bottom:63px;width:5px;height:5px;border-radius:50%;background:var(--intro-accent);box-shadow:-13px 7px 0 -1px var(--intro-accent),12px -10px 0 -1px var(--intro-accent);opacity:.55;pointer-events:none}
 @media(max-width:730px){.series-photo-flower{left:-10px;width:48px;height:48px;bottom:88px}.series-photo-dust{left:0;font-size:20px}.series-photo-ribbon{right:27px;width:19px;height:36px}}
+
+.story-carousel-controls{width:max-content;max-width:calc(100% - 20px)}.story-carousel-dots{flex-wrap:wrap;justify-content:center}
