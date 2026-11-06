@@ -31,7 +31,24 @@ export default function SeriesIntro() {
               瀏覽本系列商品
             </PillButton> */}
           </div>
-          <img src={d.image} alt={d.name} />
+          <figure className="series-hero-visual">
+            <svg className="series-photo-flower" viewBox="0 0 80 80" fill="none" aria-hidden="true">
+              {[0, 72, 144, 216, 288].map((angle) => (
+                <ellipse key={angle} cx="40" cy="24" rx="12" ry="18" transform={`rotate(${angle} 40 40)`} fill="#fffefd" stroke="currentColor" strokeOpacity=".25" />
+              ))}
+              <circle cx="40" cy="40" r="8" fill="#fff7dd" />
+            </svg>
+            <span className="series-photo-ribbon" aria-hidden="true" />
+            <span className="series-photo-dust" aria-hidden="true">✧</span>
+            <span className="series-photo-label">{seriesKey === 'princess' ? '甜美與優雅，恰到好處' : '今天也要可可愛愛'}</span>
+            <span className="series-photo-sparkle" aria-hidden="true">✦</span>
+            <img src={d.image} alt={d.name} />
+            <span className="series-photo-heart" aria-hidden="true">♡</span>
+            <figcaption>
+              <span aria-hidden="true">Little lovely moments</span>
+              {seriesKey === 'princess' ? '從日常穿搭開始，展現甜美氣質。' : '繽紛柔和的色彩，讓日常穿搭更有亮點。'}
+            </figcaption>
+          </figure>
         </div>
       </div>
       <section id="products" className="wrap section series-products" aria-labelledby="series-products-title">
