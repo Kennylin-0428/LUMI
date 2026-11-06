@@ -23,6 +23,10 @@ export default function SeriesIntro() {
             <h1>{d.name}</h1>
             <h3>{d.tagline}</h3>
             <p>{d.description}</p>
+            <div className="intro-highlights" aria-label="系列亮點">
+              {d.features.map(([, title]) => <span key={title}>{title}</span>)}
+            </div>
+            <span className="intro-signature" aria-hidden="true">little steps, lovely days</span>
             {/* <PillButton to={`/${seriesKey}#products`} className={seriesKey === 'baby' ? 'blue' : ''}>
               瀏覽本系列商品
             </PillButton> */}

@@ -100,3 +100,19 @@
 
 .promise-details{--detail-ink:#c38b9c;--detail-paper:#fff4f7}.promise-details .series-detail p{min-height:100px;text-align:left}.promise-details .series-detail:nth-child(2){color:#b49570}.promise-details .series-detail:nth-child(3){background:#f1f7fa;--detail-paper:#f1f7fa;color:#7e9cad}
 @media(max-width:730px){.promise-details .series-detail p{min-height:0}}
+
+.hero-visual.hero-mascot img{width:70%;margin-inline:auto;aspect-ratio:1 / 1;height:auto;max-height:none;object-fit:contain;transform:none}
+
+/* Shared collection and story introduction. */
+.intro-hero{--intro-accent:#8eafc5;position:relative;isolation:isolate;border:1px solid #ffffff;box-shadow:0 12px 40px #987b6810;background:radial-gradient(ellipse at 8% 0%,#ffffffc9,transparent 55%),linear-gradient(120deg,#e8f3fc,#fff5f0);gap:42px}
+.intro-hero.princess{--intro-accent:#cc96ab;background:radial-gradient(ellipse at 8% 0%,#ffffffc9,transparent 55%),linear-gradient(120deg,#ffecf1,#f8edf3)}
+.intro-hero::before{content:'';position:absolute;z-index:-1;width:310px;height:310px;right:-90px;top:-130px;border:1px solid #ffffffc9;border-radius:50%;box-shadow:0 0 0 24px #ffffff30,0 0 0 48px #ffffff20;pointer-events:none}
+.intro-hero .eyebrow{display:inline-block;padding:6px 13px;border:1px solid #ffffff;border-radius:100px;background:#ffffff85;font-size:10px;letter-spacing:2px}
+.intro-hero h3{font-size:18px;font-weight:500;letter-spacing:1px;color:#94746d;margin:0 0 15px}
+.intro-hero p{line-height:2;max-width:440px}
+.intro-highlights{display:flex;flex-wrap:wrap;gap:8px;margin:22px 0}
+.intro-highlights span{display:inline-flex;align-items:center;gap:7px;padding:6px 12px;border-radius:11px;background:#ffffffa6;border:1px solid #ffffff;color:#8d746d;font-size:12px}
+.intro-highlights span::before{content:'';width:5px;height:5px;border-radius:50%;background:var(--intro-accent)}
+.intro-signature{display:block;font-family:Georgia,serif;font-style:italic;letter-spacing:1px;font-size:14px;color:var(--intro-accent);margin-top:25px}
+.intro-hero>img,.intro-hero>.story-carousel{border:6px solid #ffffffb3;box-shadow:0 10px 26px #a67f8017}
+@media(max-width:730px){.intro-hero{gap:24px}.intro-hero h3{font-size:16px}.intro-highlights{gap:6px;margin:18px 0}.intro-highlights span{font-size:11px;padding:5px 10px}.intro-signature{margin-top:18px}}

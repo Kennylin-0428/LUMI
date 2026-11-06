@@ -1,4 +1,4 @@
-import { ASSETS } from '../data.js';
+import SelectionTiers from '../components/SelectionTiers.jsx';
 import PillButton from '../components/PillButton.jsx';
 import SectionHeading from '../components/SectionHeading.jsx';
 import CollectionCards from '../components/CollectionCards.jsx';
@@ -11,16 +11,16 @@ export default function Home() {
       <section className="hero wrap">
         <div className="hero-content">
           <span className="eyebrow">LITTLE STEPS, LOVELY DAYS</span>
-          <h1>把日常的小可愛，<br />穿在腳上。</h1>
+          <h1>把日常的可愛，<br />穿在腳上。</h1>
           <p>從活潑可愛的寶寶鞋，到甜美優雅的公主鞋。LUMI 露米陪伴孩子每一個閃閃發光的小日常。</p>
           <div className="hero-actions">
             <PillButton to="/collections">探索兩大系列</PillButton>
             <PillButton to="/story" className="secondary">認識 LUMI</PillButton>
           </div>
         </div>
-        <div className="hero-visual">
+        <div className="hero-visual hero-mascot">
           <span className="sparkle float">✦</span>
-          <img src={ASSETS.princess} alt="LUMI 甜美公主鞋系列實品參考照片" />
+          <img src="/assets/lumi-mascot-party.png" alt="LUMI 吉祥物戴著粉色蝴蝶結、穿著公主鞋，參加溫馨派對" width="1254" height="1254" />
         </div>
       </section>
       <section className="wrap section">
@@ -31,6 +31,7 @@ export default function Home() {
         />
         <CollectionCards />
       </section>
+      <SelectionTiers />
       <section className="wrap section">
         <SectionHeading eyebrow="OUR LITTLE PROMISE" title="選一雙鞋，也放一點心思" />
         <PromiseCards />
