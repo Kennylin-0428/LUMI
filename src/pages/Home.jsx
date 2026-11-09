@@ -12,7 +12,7 @@ export default function Home() {
       <section className="hero wrap">
         <div className="hero-content">
           <span className="eyebrow">LITTLE STEPS, LOVELY DAYS</span>
-          <h1>把日常的可愛，<br />穿在腳上。</h1>
+          <h1>從腳尖開始的<br/>美好日常</h1>
           <p>從活潑可愛的寶寶鞋，到甜美優雅的公主鞋。LUMI 露米陪伴孩子每一個閃閃發光的小日常。</p>
           <div className="hero-actions">
             <PillButton to="/collections">探索兩大系列</PillButton>
