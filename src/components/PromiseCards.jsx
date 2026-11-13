@@ -1,7 +1,7 @@
 const PROMISES = [
   ['CHOSEN WITH CARE', '認真挑選', '我們想挑選的，是孩子喜歡、大人也樂意搭配的鞋款。從外型到小細節，都多看一眼。'],
   ['A LITTLE GUIDANCE', '把選鞋說清楚', '整理款式特色與尺寸參考，希望讓你挑選時，多一點依據，少一點猜測。'],
-  ['FOR EVERYDAY MOMENTS', '陪伴平常日子', '不一定要等到特別的日子。希望喜歡的鞋，也能成為出門散步、見朋友時的小小開心。'],
+  ['FOR EVERYDAY MOMENTS', '陪伴日常生活', '不一定要等到特別的日子。希望喜歡的鞋，也能成為出門散步、見朋友時的小小開心。'],
 ];
 
 function PromiseDrawing({ index }) {

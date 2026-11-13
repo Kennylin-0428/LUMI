@@ -17,7 +17,7 @@ const SELECTION_TIERS = [
     name: 'LUMI PREMIUM',
     title: '精緻珍藏款',
     image: 'assets/等級標籤3.png',
-    description: '以更細緻的外觀與裝飾細節為選品方向，為生日、聚會與值得紀念的時刻，挑選一份特別的可愛。',
+    description: '以精緻的鞋型與細膩的裝飾設計為選品方向，讓寶貝無論是參加生日派對、家庭聚會，或是值得紀念的特別日子，都能展現甜美可愛的模樣。',
   },
 ];
 

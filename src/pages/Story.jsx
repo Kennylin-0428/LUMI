@@ -15,7 +15,7 @@ export default function Story() {
         <div className="intro-hero about-lumi">
           <div>
             <span className="eyebrow">HELLO, WE ARE LUMI</span>
-            <h1>從腳尖開始的美好日常。</h1>
+            <h1>從小腳丫開始的美好日常。</h1>
             <p>
               LUMI 露米，是一個以童趣與柔和色彩為靈感的童鞋選品品牌。我們從日常穿搭與特別時刻出發，挑選繽紛的寶寶鞋與精緻的公主鞋，希望讓家長更容易找到符合孩子需求與喜好的款式，為成長中的每一步添上一點可愛。
             </p>

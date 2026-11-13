@@ -10,7 +10,7 @@ export default function Footer() {
             <span className="logo-mark">LUMI</span>
             <small>露米</small>
           </div>
-          <p>從腳尖開始的美好日常。<br />寶寶鞋與公主鞋，用心挑選每一份童趣。</p>
+          <p>從小腳丫開始的美好日常。<br />寶寶鞋與公主鞋，用心挑選每一份童趣。</p>
         </div>
         <div>
           <h4>系列選購</h4>
